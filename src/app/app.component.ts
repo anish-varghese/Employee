@@ -9,7 +9,7 @@ import { SearchComponent } from './search/search.component';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  
+
 }
 
 

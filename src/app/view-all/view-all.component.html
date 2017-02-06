@@ -1,18 +1,17 @@
 <table class="table table-bordered">
-<tr>
-  <th>Employee Id</th>
-  <th>Employee Name</th>
-  <th>Date Of Joining</th>
-  <th>Designation</th>
-  <th>Band</th>
-</tr>
-<tr *ngFor="let c of c1 ; let i=index">
-  <td> {{c.employeeId}} </td>
-  <td> {{c.employeeName}} </td>
-  <td> {{c.dateJoining}} </td>
-  <td> {{c.designation}} </td>
-  <td> {{c.band}} </td>
-</tr>
+  <tr>
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Date Of Joining</th>
+    <th>Designation</th>
+    <th>Band</th>
+  </tr>
+  <tr *ngFor="let c of c1 ; let i=index">
+    <td> {{c.employeeId}} </td>
+    <td> {{c.employeeName}} </td>
+    <td> {{c.dateJoining}} </td>
+    <td> {{c.designation}} </td>
+    <td> {{c.band}} </td>
+  </tr>
 </table>
-<button type="button" class="btn btn-primary" (click)="viewAllFn()" >View all</button>
-  
+<button type="button" class="btn btn-primary" (click)="viewAllFn()">View all</button>

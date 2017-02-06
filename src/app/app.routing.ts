@@ -7,10 +7,10 @@ import { AddNewEmployeeComponent } from './add-new-employee/add-new-employee.com
 import { HomeComponent } from './home/home.component'
 
 const APP_ROUTES: Routes = [
-     { path: '', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'SearchEmployee', component: SearchComponent },
     { path: 'ViewAll', component: ViewAllComponent },
-    { path: 'AddNew', component: AddNewEmployeeComponent }, 
+    { path: 'AddNew', component: AddNewEmployeeComponent },
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

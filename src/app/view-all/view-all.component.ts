@@ -9,18 +9,16 @@ import { EmployeeService } from '../employee.service'
 })
 export class ViewAllComponent implements OnInit {
 
-  c1:EmployeeClass[]=[];
-    constructor(private add:EmployeeService) {
-       this.c1 = this.add.getEmployee();       
-    
-   }     
-      
-  viewAllFn(){
-   this.c1 = this.add.searchResult();    
+  c1: EmployeeClass[] = [];
+  constructor(private add: EmployeeService) {
+    this.c1 = this.add.getEmployee();
+  }
+
+  viewAllFn() {
+    this.c1 = this.add.searchResult();
   }
 
   ngOnInit() {
-    
-     //this.c1 = this.add.searchResult();
-   }
- }
+    //this.c1 = this.add.searchResult();
+  }
+}

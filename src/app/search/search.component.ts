@@ -18,11 +18,11 @@ export class SearchComponent implements OnInit {
   searchVar: string;
   filterVar: string;
   type: string = 'text';
-  hideFlag=false;
-  
+  hideFlag = false;
+
   myForm: FormGroup;
   constructor(private add: EmployeeService) {
-    this.c1 = this.add.getEmployee(); 
+    this.c1 = this.add.getEmployee();
     this.myForm = new FormGroup({
       'search': new FormControl('', [Validators.required]),
       'toDate': new FormControl('', [Validators.required])
@@ -31,8 +31,8 @@ export class SearchComponent implements OnInit {
   onChangeSearch(val) {
     let str = this.myForm.value;
     console.log(str);
-    str.search='';
-    this.hideFlag=false;
+    str.search = '';
+    this.hideFlag = false;
     this.searchVar = val;
     this.type = 'text';
     if (val == 'Employee Number') {
@@ -60,10 +60,10 @@ export class SearchComponent implements OnInit {
   }
 
   onChangeFilter(va) {
-    this.hideFlag=false;
+    this.hideFlag = false;
     this.filterVar = va;
-    if(va=='BETWEEN'){
-        this.hideFlag=true;
+    if (va == 'BETWEEN') {
+      this.hideFlag = true;
     }
   }
 
@@ -150,7 +150,7 @@ export class SearchComponent implements OnInit {
       }
       if (flag == 0) { alert("Not found"); }
     }
-   else if (this.searchVar == 'Designation') {
+    else if (this.searchVar == 'Designation') {
       let flag = 0;
       switch (this.filterVar) {
         case 'IS':
@@ -171,7 +171,7 @@ export class SearchComponent implements OnInit {
       }
       if (flag == 0) { alert("Not found"); }
     }
-   else if (this.searchVar == 'Band') {
+    else if (this.searchVar == 'Band') {
       let flag = 0;
       switch (this.filterVar) {
         case 'IS':
@@ -210,7 +210,7 @@ export class SearchComponent implements OnInit {
               this.c1.push(emp);
             }
           } break;
-          case '>':
+        case '>':
           for (let emp of this.c2) {
             if (emp.dateJoining > str.search) {
               flag = 1;
@@ -238,19 +238,19 @@ export class SearchComponent implements OnInit {
               this.c1.push(emp);
             }
           } break;
-          case 'BETWEEN':
+        case 'BETWEEN':
           for (let emp of this.c2) {
-            if (emp.dateJoining > str.search && emp.dateJoining < str.toDate ) {
+            if (emp.dateJoining > str.search && emp.dateJoining < str.toDate) {
               flag = 1;
               this.c1.push(emp);
             }
           } break;
-      }      
+      }
       if (flag == 0) { alert("Not found"); }
     }
 
-console.log(str);
-    this.add.searchEmployee=this.c1;
+    console.log(str);
+    this.add.searchEmployee = this.c1;
   }
 
   resetData() {
