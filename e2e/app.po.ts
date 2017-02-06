@@ -1,11 +1,11 @@
 import { browser, element, by } from 'protractor';
 
-export class EmployeePortalPage {
+export class Test1Page {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('ep-root h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }
