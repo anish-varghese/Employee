@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.26",
-    "name": "test1"
+    "name": "employee-portal"
   },
   "apps": [
     {
@@ -15,7 +15,7 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "app",
+      "prefix": "ep",
       "mobile": false,
       "styles": [
         "styles.css"

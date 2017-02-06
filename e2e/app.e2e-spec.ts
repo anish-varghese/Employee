@@ -1,14 +1,14 @@
-import { Test1Page } from './app.po';
+import { EmployeePortalPage } from './app.po';
 
-describe('test1 App', function() {
-  let page: Test1Page;
+describe('employee-portal App', function() {
+  let page: EmployeePortalPage;
 
   beforeEach(() => {
-    page = new Test1Page();
+    page = new EmployeePortalPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('ep works!');
   });
 });

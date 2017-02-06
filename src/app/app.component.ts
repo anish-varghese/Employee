@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 
-import { Form1Component } from './form1/form1.component';
+import { HeaderComponent } from './header.component';
+
+import { SearchComponent } from './search/search.component';
 
 @Component({
-  selector: 'app-root',
+  selector: 'ep-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app works!';
+  
 }
+
+
